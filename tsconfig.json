@@ -1,12 +1,19 @@
 {
   "compilerOptions": {
     "allowSyntheticDefaultImports": true,
-    "noImplicitAny": true,
-    "module": "es6",
+    "noImplicitAny": false,
+    "module": "CommonJS",
     "target": "es5",
-    "allowJs": true
+    "allowJs": true,
+    "esModuleInterop":true,
+    // Generate d.ts files
+    "declaration": true,
+    // This compiler run should
+    // only output d.ts files
+    "emitDeclarationOnly": true,
+    // Types should go into this directory.
+    // Removing this would place the .d.ts files
+    // next to the .js files
+    "outDir": "dist"
   },
-  "files": [
-    "src/index.ts"
-  ]
 }
