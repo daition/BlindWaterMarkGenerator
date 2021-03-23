@@ -44,10 +44,10 @@ async function loadImage(url:string):Promise<Jimp> {
  * 
  * @param url path to the image
  * @param image Jimp(@url(https://github.com/oliver-moran/jimp)) object of the image to be generated
- * @returns cv.Mat(@url(https://docs.opencv.org/4.5.1/d3/d63/classcv_1_1Mat.html)) object of the image 
+ * @returns Promise<Jimp> for writting the image 
  */
- async function outputImage(url:string,image:Jimp):Promise<void> {
-    image.write(url);    
+ async function outputImage(url:string,image:Jimp):Promise<Jimp> {
+    return image.writeAsync(url);    
 }
 
 export default {parseArguments,loadImage,outputImage}

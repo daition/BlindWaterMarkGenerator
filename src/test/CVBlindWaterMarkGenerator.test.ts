@@ -10,7 +10,9 @@ test("verify generation of blind watermark - src/test/data/test_i.jpg src/test/d
         let gen:CVBlindWaterMarkGenerator  = new CVBlindWaterMarkGenerator(inputImage, "test");
         gen.generateBlindWaterMark();
         await Utils.outputImage("src/test/data/test_t.png",gen.cvImageWithWatermark);
+        let statT:fs.Stats = fs.statSync("src/test/data/test_t.png");           
+        let statO:fs.Stats = fs.statSync("src/test/data/test_o.png");           
         //TODO: need a more accurate comparing method here, such as compareHist in opencv
-        expect(fs.statSync("src/test/data/test_t.png").size).toBe(fs.statSync("src/test/data/test_o.png").size);
+        expect(statT.size).toBe(statO.size);
 });
 

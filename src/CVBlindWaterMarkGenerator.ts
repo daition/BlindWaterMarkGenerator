@@ -1,7 +1,7 @@
 import Jimp from 'jimp';
-import opencv from './jslib/opencv.js';
+import opencv from 'opencv';
 
-let cv:any = opencv;
+const cv:any=opencv;
 /**
  * Class used for blind water mark manipulations based on OpenCV
  * 
