@@ -1,29 +1,29 @@
 import Jimp from 'jimp';
-import opencv from 'opencv';
+import Opencv from './jslib/opencv.js';
 
-const cv:any=opencv;
+const cv:any=Opencv;
 /**
  * Class used for blind water mark manipulations based on OpenCV
  * 
  */
 export default class CVBlindWaterMarkGenerator {
     private cvOriginalImageMat: any;
-    private optimalRows: number;
-    private optimalCols: number;
+    private optimalRows!: number;
+    private optimalCols!: number;
     private scale: any;
-    private _textForWaterMark: string;
+    private _textForWaterMark!: string;
     private cvImageMatWithWatermark: any;
     private planes: any;
     private splitChannels: any;
 
-    private _originalImage: Jimp;
+    private _originalImage!: Jimp;
     public get originalImage(): Jimp {
         return this._originalImage;
     }
     public set originalImage(value: Jimp) {
         this._originalImage = value;
     }
-    private _cvImageWithWatermark: Jimp;
+    private _cvImageWithWatermark!: Jimp;
     public get cvImageWithWatermark(): Jimp {
         return this._cvImageWithWatermark;
     }

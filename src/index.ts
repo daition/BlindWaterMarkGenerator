@@ -50,5 +50,5 @@ start();
  * @param options given arguments
  */
 function isValidOption(options: ParsedOptions) {
-    return !(options["input"]&&options["output"]);
+    return options["input"]&&options["output"];
 }

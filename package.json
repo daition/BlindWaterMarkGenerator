@@ -1,31 +1,24 @@
 {
   "devDependencies": {
-    "@rollup/plugin-typescript": "^8.2.0",
     "@types/jest": "^26.0.20",
+    "@types/node": "^14.14.35",
     "jest": "^26.6.3",
-    "ts-jest": "^26.5.3",
-    "ts-loader": "^8.0.18",
-    "tslib": "^2.1.0",
-    "typescript": "^4.2.3"
+    "ts-jest": "^26.5.3"
   },
   "dependencies": {
     "@types/jimp": "^0.2.28",
     "@types/log4js": "^2.3.5",
     "getopts": "^2.3.0",
     "jimp": "^0.16.1",
-    "log4js": "^6.3.0",
-    "ts-node": "^9.1.1"
+    "log4js": "^6.3.0"
   },
   "version": "1.0.0",
   "description": "Blind Water Mark Generator",
   "name": "blind-watermark-generator",
-  "bin": {
-    "genWM": "app.js"
-  },
-  "main": "src/index.ts",
   "scripts": {
     "build": "tsc --build tsconfig.json ",
     "test": "jest",
-    "run": "ts-node src/index.ts"
+    "run": "ts-node src/index.ts",
+    "debug": "ts-node src/index.ts"
   }
 }
