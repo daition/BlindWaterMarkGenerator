@@ -1,3 +1,4 @@
+#!/usr/bin/env ts-node
 import { ParsedOptions } from 'getopts';
 import Utils from './Utils';
 import Jimp from 'jimp';
@@ -13,7 +14,10 @@ async function start(): Promise<void> {
 
     //check if valida arguments are found
     if (!isValidOption(options)) {
-        console.log("No valid arguments. exit.");
+        console.log("No valid arguments.");
+        console.log("Usage:");
+        console.log("bgw-cli -i path_to_image -o path_to_image_with_blind_water_mark -t text_to_be_added_as_blind_water_mark");
+
         return;
     }
 
@@ -50,5 +54,5 @@ start();
  * @param options given arguments
  */
 function isValidOption(options: ParsedOptions) {
-    return options["input"]&&options["output"];
+    return options["input"] && options["output"];
 }

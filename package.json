@@ -8,13 +8,20 @@
   "dependencies": {
     "@types/jimp": "^0.2.28",
     "@types/log4js": "^2.3.5",
+    "@types/node": "^14.14.35",
     "getopts": "^2.3.0",
     "jimp": "^0.16.1",
-    "log4js": "^6.3.0"
+    "log4js": "^6.3.0",
+    "ts-node": "^9.1.1",
+    "tsconfig-paths": "^3.9.0"
   },
   "version": "1.0.0",
   "description": "Blind Water Mark Generator",
-  "name": "blind-watermark-generator",
+  "name": "bgw-cli",
+  "repository": "https://github.com/daition/BlindWaterMarkGenerator",
+  "bin": {
+    "bgw-cli": "npm run-script run"
+  },
   "scripts": {
     "build": "tsc --build tsconfig.json ",
     "test": "jest",
