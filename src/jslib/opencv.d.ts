@@ -1,3 +1,1 @@
-declare module "opencv" {
-    export const opencv:any;
-}
+declare module "opencv";

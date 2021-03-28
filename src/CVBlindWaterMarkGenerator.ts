@@ -1,5 +1,5 @@
 import Jimp from 'jimp';
-import Opencv from './jslib/opencv.js';
+import Opencv from 'opencv';
 
 const cv:any=Opencv;
 /**
